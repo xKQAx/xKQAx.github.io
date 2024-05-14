@@ -1,0 +1,251 @@
+body {
+    font-family: 'source serif pro', sans-serif;
+    background-color: #f4f4f4; /* Fondo más oscuro */
+
+}
+
+.container2 {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 50px; /* Espacio entre el texto y la sección de abajo */
+    animation: slideIn 0.5s ease-in-out;
+    
+  }
+
+  @keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+  
+  .container2 h2 {
+    margin-bottom: 20px; /* Espacio entre el título y el texto */
+  }
+  
+  .container2 p {
+    font-size: 16px; /* Tamaño de fuente del texto */
+  }
+  
+  
+.container1 {
+    margin-top: 50px;
+    margin-bottom: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    animation: slideIn 0.5s ease-in-out;
+    
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+  
+.image-container {
+    margin-bottom: 80px; /* Espacio entre las imágenes y los botones */
+}
+  
+  .image-container img {
+    width: 200px;
+    height: auto;
+    margin: 0 110px; /* Espacio entre las imágenes */
+  }
+  
+  .button-container button {
+    padding: 10px 20px;
+    margin: 0 150px; /* Espacio entre los botones */
+    font-size: 16px;
+    background-color: #4f8aca;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 140px;
+  }
+  
+  .button-container button:hover {
+    background-color: #213246;
+  }
+  header {
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;    
+    padding-bottom: 10px; /* Ajusta el padding para que el difuminado se superponga ligeramente */
+    background-color: #f9f9f9;
+    animation: fadeInFromSides 3s;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Ajusta el valor para que el difuminado esté pegado a la parte inferior del header */
+    width: 100%;
+    height: 10px; /* Altura del difuminado */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+    filter: blur(10px); /* Difuminado */
+}
+
+/* Animación */
+@keyframes fadeInFromSides {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.logo img {
+    width: 80px; /* Ajusta el ancho según necesites */
+    height: auto; /* Autoajuste de la altura para mantener la proporción */
+    float: left;
+    margin-right: 950px; /* Ajusta el margen derecho según sea necesario */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: right; /* Alinea los elementos a la derecha */
+    
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+    
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+    
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding-right: 5px; /* Espaciado entre los elementos */
+}
+
+
+#header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#header nav ul li {
+    margin-right: 5px;
+    padding-right: 5px;
+    border-right: 2px solid #b0bdc1; /* Línea vertical */
+}
+
+#header nav ul li:last-child {
+    border-right: none; /* Eliminar la línea vertical en el último elemento */
+}
+/* Estilos para el footer */
+footer {
+    font-family: 'source serif pro', sans-serif;
+    background-color: #5f9ac6;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 0px;
+}
+
+.social-media {
+    margin: 0 auto;
+}
+
+/* Estilo para los íconos de las redes sociales */
+.social-media a {
+    color: #fff; /* Color de los íconos */
+    font-size: 24px;
+    margin-right: 20px; /* Espacio entre los íconos */
+    text-decoration: none;
+}
+
+.copy-right {
+    margin: 0 auto;
+    text-align: center;
+    color: #fff; /* Cambia el color del texto del copyright si es necesario */
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+/* Estilo para resaltar el correo electrónico y el teléfono al pasar el cursor sobre ellos */
+.copy-right p {
+    margin: 5px 0; /* Espaciado entre los párrafos */
+}
+
+.copy-right span {
+    cursor: pointer; /* Cambia el cursor a pointer al pasar por encima */
+    transition: none; /* Elimina la transición de color */
+}
+
+.copy-right span:hover {
+    text-decoration: none; /* Elimina el subrayado al pasar el cursor sobre él */
+}
+
+/* Animación para el footer */
+.footer {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Movimiento inicial hacia abajo */
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.footer.animated {
+    opacity: 1;
+    transform: translateY(0); /* Estilo para resaltar el correo electrónico y el teléfono al pasar el cursor sobre ellos */
+}
+.copy-right p {
+    margin: 5px 0; /* Espaciado entre los párrafos */
+}
+
+/* Resalte azul para el correo y el teléfono */
+.highlight {
+    cursor: pointer; /* Cambia el cursor a pointer al pasar por encima */
+    color: #002fff; /* Color azul para el resalte */
+    transition: color 0.3s; /* Transición suave del color de texto */
+}
+
+.highlight:hover {
+    text-decoration: underline; /* Subraya el texto al pasar el cursor sobre él */
+}
+
+/* Animación para el footer */
+.footer {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Movimiento inicial hacia abajo */
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.footer.animated {
+    opacity: 1;
+    transform: translateY(0);
+}

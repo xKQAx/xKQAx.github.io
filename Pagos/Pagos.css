@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'source serif pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(207, 43%, 96%);
+    color: #333;
+}
+
+#payment {
+    margin: 50px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    animation: fadeIn 1s ease-out;
+}
+
+#payment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#payment-form label {
+    margin-bottom: 10px;
+}
+
+#payment-form input,
+#payment-form select {
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+#payment-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#payment-form button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.logo img {
+    width: 80px; /* Ajusta el ancho según necesites */
+    height: auto; /* Autoajuste de la altura para mantener la proporción */
+    float: left;
+    margin-right: 1020px; /* Ajusta el margen derecho según sea necesario */
+}
+
+header {
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;    
+    padding-bottom: 10px; /* Ajusta el padding para que el difuminado se superponga ligeramente */
+    background-color: #f9f9f9;
+    animation: slideIn 0.5s ease-in-out;
+    animation: fadeInFromSides 3s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromSides {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Ajusta el valor para que el difuminado esté pegado a la parte inferior del header */
+    width: 100%;
+    height: 10px; /* Altura del difuminado */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+    filter: blur(10px); /* Difuminado */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: right; /* Alinea los elementos a la derecha */
+    
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+    
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+    
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding-right: 5px; /* Espaciado entre los elementos */
+}
+
+
+#header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#header nav ul li {
+    margin-right: 5px;
+    padding-right: 5px;
+    border-right: 2px solid #b0bdc1; /* Línea vertical */
+}
+
+#header nav ul li:last-child {
+    border-right: none; /* Eliminar la línea vertical en el último elemento */
+}
+
+/* Estilos para el footer */
+footer {
+    font-family: 'source serif pro', sans-serif;
+    background-color: #5f9ac6;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    animation: fadeInFromSides 3s;
+}
+
+
+
+.footer-top {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #89cdfa;
+    padding: 0 10px;
+}
+
+.contact-info {
+    margin: 0 auto;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.social-media {
+    margin: 0 auto;
+}
+
+/* Estilo para los íconos de las redes sociales */
+.social-media a {
+    color: #fff; /* Color de los íconos */
+    font-size: 24px;
+    margin-right: 20px; /* Espacio entre los íconos */
+    text-decoration: none;
+}
+
+.copy-right {
+    margin: 0 auto;
+    text-align: center;
+    color: #fff; /* Cambia el color del texto del copyright si es necesario */
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+/* Estilo para resaltar el correo electrónico y el teléfono al pasar el cursor sobre ellos */
+.copy-right p {
+    margin: 5px 0; /* Espaciado entre los párrafos */
+}
+
+.copy-right span {
+    cursor: pointer; /* Cambia el cursor a pointer al pasar por encima */
+    transition: none; /* Elimina la transición de color */
+}
+
+.copy-right span:hover {
+    text-decoration: none; /* Elimina el subrayado al pasar el cursor sobre él */
+}
+
+/* Animación para el footer */
+.footer {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Movimiento inicial hacia abajo */
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.footer.animated {
+    opacity: 1;
+    transform: translateY(0); /* Estilo para resaltar el correo electrónico y el teléfono al pasar el cursor sobre ellos */
+}
+.copy-right p {
+    margin: 5px 0; /* Espaciado entre los párrafos */
+}
+
+/* Resalte azul para el correo y el teléfono */
+.highlight {
+    cursor: pointer; /* Cambia el cursor a pointer al pasar por encima */
+    color: #002fff; /* Color azul para el resalte */
+    transition: color 0.3s; /* Transición suave del color de texto */
+}
+
+.highlight:hover {
+    text-decoration: underline; /* Subraya el texto al pasar el cursor sobre él */
+}
+
+/* Animación para el footer */
+.footer {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Movimiento inicial hacia abajo */
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.footer.animated {
+    opacity: 1;
+    transform: translateY(0);
+}

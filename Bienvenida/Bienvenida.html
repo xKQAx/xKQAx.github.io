@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniTutor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Configuracion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+<body>
+  <header id="header">
+    <div class="container">            
+        <nav>
+            <ul>
+                <div class="logo"><img src="img/logo.png" alt="UniTutor Logo"></div>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Pagos/Pagos.html">Pagos</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="container2">
+    <h2>Es gratificante volver a verte...
+        ¿Qué quieres hacer?</h2>
+    <p>Bienvenido, en la parte izquierda puedes ver tu agenda, posteriormente podrás editar tu perfil y por último ver tus chats.</p>
+  </div>
+
+  <div class="container1">
+    <div class="image-container">
+      <img src="img/calendario.jpg" alt="Imagen 1">
+      <img src="img/perfil.png" alt="Imagen 2">
+      <img src="img/chat.png" alt="Imagen 3">
+      
+    </div>
+    <div class="button-container">
+        <button type="submit" class="btn btn-primary" style="color: white;"><a href="../Busqueda/Busqueda.html" style="color: white; text-decoration: none;">Buscar Tutoría</a></button>
+        <button type="submit" class="btn btn-primary" style="color: white;"><a href="../Perfil/Perfil.html" style="color: white; text-decoration: none;">Editar Perfil</a></button>
+        <button type="submit" class="btn btn-primary" style="color: white;"><a href="../Chat/Chat.html" style="color: white; text-decoration: none;">Chats</a></button>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-top">
+        <div class="contact-info">
+            <h3><strong>Contacto</strong></h3>
+            <p><strong>Correo Electrónico:</strong> <span class="highlight" onclick="copyToClipboard('info@unitutor.com')">info@unitutor.com</span> | <strong>Teléfono:</strong> <span class="highlight" onclick="copyToClipboard('+57 (607) 6421291')">+57 (607) 6421291</span></p>
+        </div>
+    </div>
+    <div class="social-media">
+        <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="copy-right">
+        <p>&copy; 2024 UniTutor. Todos los derechos reservados.</p>
+    </div>
+    </div>
+</footer>    
+</div>
+<script src="script.js"></script>
+<link rel="stylesheet" href="Bienvenida.css">
+
+<script>
+function copyToClipboard(text) {
+    const el = document.createElement('textarea');
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    alert('Copiado al portapapeles: ' + text); // Agrega un mensaje de alerta para confirmar la copia
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const email = document.getElementById('email'); // Asigna un ID al correo electrónico
+    const phone = document.getElementById('phone'); // Asigna un ID al teléfono
+
+    email.addEventListener('click', function() {
+        copyToClipboard(email.textContent); // Copia el contenido del correo electrónico al hacer clic
+    });
+
+    phone.addEventListener('click', function() {
+        copyToClipboard(phone.textContent); // Copia el contenido del teléfono al hacer clic
+    });
+});
+</script>
+</body>
+</html>
+

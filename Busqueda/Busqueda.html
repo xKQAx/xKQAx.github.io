@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UniTutor</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="Busqueda.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
+
+
+        </head>
+<body>
+    <header id="header">
+        <div class="container">            
+            <nav>
+                <ul>
+                    <div class="logo"><img src="img/logo.png" alt="UniTutor Logo"></div>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Bienvenida/Bienvenida.html"">Bienvenida</a></li>
+                    <li><a href="../Pagos/Pagos.html">Pagos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="container1">
+        <div class="buscador">
+        <input type="text" name="buscador" id="buscador" placeholder="Buscar tutoría...">
+        <i class="fas fa-search"></i>
+    </div>
+    <div class="options-column">
+        <center><h2>Tutorías disponibles</h2></center>
+        <ul id="listaClases">
+            <li class="articulo">
+            <button class="class-button">
+                <div class="class-info">
+                <h3>Estadistica Descriptiva</h3>
+                <p>Tutor: María Camila Gelvez Gómez</p>
+                <p>Duración: 2 horas</p>
+                </div>
+            </button>
+            </li>
+            <li class="articulo">
+            <button class="class-button">
+                <div class="class-info">
+                <h3>Cálculo integral</h3>
+                <p>Tutor: Juan Camilo Pérez Delgado</p>
+                <p>Duración: 1 hora</p>
+                </div>
+            </button>
+            </li>
+            <li class="articulo">
+            <button class="class-button">
+                <div class="class-info">
+                <h3>Física Mécanica</h3>
+                <p>Tutor: Gabriela Gómez Días</p>
+                <p>Duración: 1 hora</p>
+                </div>
+            </button>
+            </li>
+            <li class="articulo">
+            <button class="class-button">
+                <div class="class-info">
+                <h3>Programación</h3>
+                <p>Tutor: Ivan Días López</p>
+                <p>Duración: 30 Minutos</p>
+                </div>
+            </button>
+            </li>
+            <li class="articulo">
+            <button class="class-button">
+                <div class="class-info">
+                <h3>Epistemología</h3>
+                <p>Tutor: Paula Mantilla Herrera</p>
+                <p>Duración: 1 hora</p>
+                </div>
+            </button>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="container2">
+    <h2>Tutorías agendadas</h2>
+    
+    <div id="tutoriaAgendada" class="options-column">
+        <ul id="listaClases1">
+            <!-- Aquí se mostrará la tutoría agendada -->
+        </ul>
+    </div>
+</section>
+
+
+
+<script src="script.js"></script>
+  <footer>
+    <div class="footer-top">
+        <div class="contact-info">
+            <h3><strong>Contacto</strong></h3>
+            <p><strong>Correo Electrónico:</strong> <span class="highlight" onclick="copyToClipboard('info@unitutor.com')">info@unitutor.com</span> | <strong>Teléfono:</strong> <span class="highlight" onclick="copyToClipboard('+57 (607) 6421291')">+57 (607) 6421291</span></p>
+        </div>
+    </div>
+    <div class="social-media">
+        <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="copy-right">
+        <p>&copy; 2024 UniTutor. Todos los derechos reservados.</p>
+    </div>
+    </div>
+</footer>    
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

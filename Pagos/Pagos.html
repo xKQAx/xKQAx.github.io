@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniTutor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Configuracion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+<body>
+  <header id="header">
+    <div class="container">            
+        <nav>
+            <ul>
+                <div class="logo"><img src="img/logo.png" alt="UniTutor Logo"></div>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Bienvenida/Bienvenida.html"">Bienvenida</a></li>
+                <li><a href="Pagos.html">Pagos</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="payment">
+    <div class="container">
+        <center><h2>Detalles de Pago</h2></center>
+        <form id="payment-form">
+            <label for="card-type">Tipo de Tarjeta:</label>
+            <select id="card-type" name="card-type" required>
+                <option value="" selected disabled>Seleccione el tipo de tarjeta</option>
+                <option value="debito">Tarjeta de Débito</option>
+                <option value="credito">Tarjeta de Crédito</option>
+            </select>
+
+            <label for="card-number">Número de Tarjeta:</label>
+            <input type="text" id="card-number" name="card-number" placeholder="Ingrese el número de tarjeta" required>
+
+            <label for="expiry-date">Fecha de Expiración:</label>
+            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+
+            <label for="card-holder">Titular de la Tarjeta:</label>
+            <input type="text" id="card-holder" name="card-holder" placeholder="Titular de la tarjeta" required>
+
+            <label for="postal-code">Código Postal:</label>
+            <input type="text" id="postal-code" name="postal-code" placeholder="Código Postal" required>
+
+            <button type="submit">Pagar</button>
+        </form>
+    </div>
+</section>
+
+
+  <footer>
+    <div class="footer-top">
+        <div class="contact-info">
+            <h3><strong>Contacto</strong></h3>
+            <p><strong>Correo Electrónico:</strong> <span class="highlight" onclick="copyToClipboard('info@unitutor.com')">info@unitutor.com</span> | <strong>Teléfono:</strong> <span class="highlight" onclick="copyToClipboard('+57 (607) 6421291')">+57 (607) 6421291</span></p>
+        </div>
+    </div>
+    <div class="social-media">
+        <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="copy-right">
+        <p>&copy; 2024 UniTutor. Todos los derechos reservados.</p>
+    </div>
+    </div>
+</footer>    
+</div>
+<script src="script.js"></script>
+<link rel="stylesheet" href="Pagos.css">
+
+</body>
+</html>
+
